@@ -14,37 +14,7 @@
 #       - run: npm i -g eslint
 #       - run: eslint public/test.js 
 
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@AntoineQuesnel
-sebastien-lb /
-rubis-square
 
-1
-0
-
-    39
-
-Code
-Issues
-Pull requests 6
-Actions
-Projects
-Wiki
-Security
-
-    Insights
-
-rubis-square/.circleci/config.yml
-@sebastien-lb
-sebastien-lb ci: add circle ci config
-Latest commit a60eca5 on Dec 8, 2019
-History
-1 contributor
-40 lines (32 sloc) 1013 Bytes
 # Javascript Node CircleCI 2.0 configuration file
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
@@ -85,17 +55,3 @@ jobs:
 
       # build app
       - run: yarn build
-© 2020 GitHub, Inc.
-Terms
-Privacy
-
-    Security
-    Status
-    Help
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
