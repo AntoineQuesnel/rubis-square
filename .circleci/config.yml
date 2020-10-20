@@ -5,25 +5,17 @@ orbs:
   # Declare a dependency on the welcome-orb
   welcome: circleci/welcome-orb@0.4.1
 # Orchestrate or schedule a set of jobs
-jobs:
-  build:
-    executor:
-      name: node/default
-      tag: '10.4'
+
+commands:
+  eslint:
+    description: "check js with eslint"
+    parameters:
     steps:
-      - run:
-          command: |
-            mkdir -p ~/reports
-            eslint ./src/ --format junit --output-file ~/reports/eslint.xml
-          when: always
-      - store_test_results:
-          path: ~/reports
-      - store_artifacts:
-          path: ~/reports 
+      - run: lint
+
 workflows:
   # Name the workflow "welcome"
   welcome:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
-      - node/default
