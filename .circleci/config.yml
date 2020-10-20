@@ -5,13 +5,7 @@ orbs:
   # Declare a dependency on the welcome-orb
   welcome: circleci/welcome-orb@0.4.1
 # Orchestrate or schedule a set of jobs
-
-commands:
-  eslint:
-    description: "check js with eslint"
-    parameters:
-    steps:
-      - run: lint
+  eslint: arrai/eslint@2.0.0
 
 workflows:
   # Name the workflow "welcome"
@@ -19,3 +13,6 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
+  eslint:
+    jobs:
+      - eslint/eslint
