@@ -52,6 +52,9 @@ jobs:
 
       # run tests!
       - run: yarn test
+
+      # eslint
+      - run: yarn add eslint --dev
       - run: eslint public/test.js 
 
       # build app
